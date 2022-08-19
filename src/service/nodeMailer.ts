@@ -18,6 +18,7 @@ async function sendEmailForBroker(){
         subject: "Hello ✔",
         text: "oi mamis",
         //html: "<b>Hello world?</b>",
+        //html: "<b>Hello world?</b>
     })
     console.log("resposta do nodemailer:",dataMessage)
 }
