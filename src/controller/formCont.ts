@@ -16,7 +16,7 @@ export class FormCont {
                 telefone:req.body.telefone,
                 plano:req.body.plano
             }
-            const formLPBuss = this.formBuss.formLP(dataUser)
+            const formLPBuss = await this.formBuss.formLP(dataUser)
             res.send(formLPBuss).status(201)
         } catch (error) {
             if(error instanceof CustomError){

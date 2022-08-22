@@ -7,7 +7,7 @@ export class FormBuss {
     async formLP(dataUser:DataUserDTO){
         const {nome, email, telefone, plano} = dataUser
         if(!nome || !email || !telefone || !plano){
-            throw new CustomError(400, "Os campos mão foram preenchidos corretamente!")
+            throw new CustomError(400, "Os campos não foram preenchidos corretamente!")
         }
         const data:DataUserDTO = {
             nome,
@@ -15,6 +15,8 @@ export class FormBuss {
             telefone,
             plano
         }
-        const formData = this.formData.FormLP(data)
+        const formData = await this.formData.createCotation(data)
+        console.log("RESPOSTAS BUSSNESS", formData)
+        return formData
     }
 }
