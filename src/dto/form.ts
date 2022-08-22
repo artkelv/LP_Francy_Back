@@ -1,6 +1,6 @@
 export interface DataUserDTO {
     nome:string,
     email:string,
-    telefone:number,
+    telefone:string,
     plano:string
 }; 
