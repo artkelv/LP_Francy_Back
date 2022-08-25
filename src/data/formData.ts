@@ -3,15 +3,16 @@ import { CustomError } from "../error/customError";
 import { BaseDataBase } from "./baseDataBase";
 
 export class FormData extends BaseDataBase{
-    private NAME_DB = "FormLP"
+    private TABLE_NAME = "LPfrancy"
 
     async createCotation(dataUser:DataUserDTO):Promise<any>{
         try {
-            const response = await this.connection(this.NAME_DB)
+            const response = await this.connection(this.TABLE_NAME)
                 .insert(dataUser)
             return {status:"sucessful!", response}  
-        } catch (error:any) {
-            new CustomError(400, error.response)
+            //
+        } catch (err:any) {
+            throw new Error(err.sqlMessage || err.message)
         }
     }
 }

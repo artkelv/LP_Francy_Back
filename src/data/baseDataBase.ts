@@ -4,10 +4,10 @@ import dotenv from "dotenv";
 dotenv.config()
 
 export class BaseDataBase {
-    protected connection = require('knex')({
+    protected connection = knex({
         client: 'mysql',
         connection: {
-          host : '127.0.0.1',
+          host : process.env.BD_HOST,
           port : 3306,
           user : process.env.BD_USER,
           password : process.env.BD_PASS,

@@ -1,14 +1,17 @@
 import express from "express";
-import { Request, Response } from "express"
+import { Request, Response } from "express";
 import { AddressInfo } from "net";
 import { LPformRouter } from "./router/LPform";
 
+import BodyParser from "body-parser";
 const app = express();
-const port = 3003;
+const port = 3000;
+
+app.use(BodyParser.json())
 
 app.get("/", (req:Request, res:Response) => {
   res.json({
-    feitoPor:"Arthur kelvim",
+    feitoPor:"Arthur Kelvim",
   })
 });
 
