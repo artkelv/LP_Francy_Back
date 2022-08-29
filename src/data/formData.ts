@@ -9,10 +9,11 @@ export class FormData extends BaseDataBase{
         try {
             const response = await this.connection(this.TABLE_NAME)
                 .insert(dataUser)
+                console.log("kkkkkkkk", response)
             return {status:"sucessful!", response}  
-            //
+            
         } catch (err:any) {
-            throw new Error(err.sqlMessage || err.message)
+            throw new CustomError(400 ,err.sqlMessage || err.message)
         }
     }
 }
