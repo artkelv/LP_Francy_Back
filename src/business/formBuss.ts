@@ -16,7 +16,6 @@ export class FormBuss {
             plano
         }
         const formData = await this.formData.createCotation(data)
-        console.log("RESPOSTAS BUSSNESS", formData)
         return formData
     }
 }
