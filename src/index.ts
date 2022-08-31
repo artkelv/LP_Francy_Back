@@ -17,7 +17,7 @@ app.get("/", (req:Request, res:Response) => {
 
 app.use("/form", LPformRouter)
 
-const server = app.listen(port || 3003,() => {
+const server = app.listen(process.env.PORT || port,() => {
   const adress = server.address() as AddressInfo
   if(server){
     console.log(`servidor, rodando na porta http://localhost:${adress.port}`)
