@@ -7,11 +7,11 @@ export class BaseDataBase {
     protected connection = knex({
         client: 'mysql',
         connection: {
-          host : process.env.BD_HOST_LF,
+          host : process.env.BD_HOST_LB,
           port : 3306,
-          user : process.env.BD_USER_LF,
-          password : process.env.BD_PASS_LF,
-          database : process.env.BD_NAME_LF
+          user : process.env.BD_USER_LB,
+          password : process.env.BD_PASS_LB,
+          database : process.env.BD_NAME_LB
         }
       });
 }
