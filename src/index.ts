@@ -17,6 +17,10 @@ app.get("/", (req:Request, res:Response) => {
   })
 });
 
+app.get("/teste", (req:Request, res:Response) => {
+  res.send("testando requisição get com nodejs")
+})
+
 app.use("/form", LPformRouter)
 
 const server = app.listen(process.env.PORT || port,() => {
