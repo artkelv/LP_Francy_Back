@@ -27,7 +27,6 @@ app.post("/teste", async (req:Request, res:Response) => {
     plano:req.body.plano
   }
   const dataForm = await new FormData().createCotation(dataUser)
-  console.log("seu dataorm", dataForm)
   res.send({
     status:"sucess",
     dataForm
