@@ -18,7 +18,6 @@ app.get("/", (req:Request, res:Response) => {
     feitoPor:"Arthur Kelvim",
   })
 });
-
 app.post("/teste", async (req:Request, res:Response) => {
   const dataUser:DataUserDTO = {
     nome:req.body.nome,
