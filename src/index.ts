@@ -5,8 +5,6 @@ import { AddressInfo } from "net";
 import { LPformRouter } from "./router/LPform";
 
 import BodyParser from "body-parser";
-import { DataUserDTO } from "./dto/form";
-import { FormData } from "./data/formData";
 const app = express();
 const port = 3000;
 
@@ -18,19 +16,6 @@ app.get("/", (req:Request, res:Response) => {
     feitoPor:"Arthur Kelvim",
   })
 });
-app.post("/teste", async (req:Request, res:Response) => {
-  const dataUser:DataUserDTO = {
-    nome:req.body.nome,
-    email:req.body.email,
-    telefone:req.body.telefone,
-    plano:req.body.plano
-  }
-  const dataForm = await new FormData().createCotation(dataUser)
-  res.send({
-    status:"sucess",
-    dataForm
-  }).status(201)
-})
 
 app.use("/form", LPformRouter)
 
