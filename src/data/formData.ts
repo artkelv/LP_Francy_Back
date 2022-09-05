@@ -13,5 +13,6 @@ export class FormData extends BaseDataBase{
         } catch (err:any) {
             throw new CustomError(400 ,err.sqlMessage || err.message)
         }
+        
     }
 }

@@ -17,6 +17,7 @@ export class FormCont {
                 plano:req.body.plano
             }
             const formLPBuss = await this.formBuss.formLP(dataUser)
+            
             res.send(formLPBuss).status(201)
         } catch (error) {
             if(error instanceof CustomError){
