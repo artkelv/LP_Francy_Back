@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "tsDev": "ts-node-dev ./src/index.ts",
     "start": "tsc && node ./build/src/index.js",
-    "mailer": "tsc && node ./build/src/service/nodeMailer.js"
+    "mailer": "tsc && node ./build/src/service/nodeMailer.js",
+    "firebase": "tsc && node ./build/src/fireteste.js"
   },
   "keywords": [],
   "author": "",
@@ -30,6 +31,7 @@
     "@types/nodemailer": "^6.4.5",
     "axios": "^0.27.2",
     "express": "^4.18.1",
+    "firebase": "^9.9.4",
     "mysql": "^2.18.1",
     "typescript": "^4.7.4",
     "uninstall": "^0.0.0"
