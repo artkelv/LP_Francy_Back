@@ -31,8 +31,8 @@ function firebaseTeste(dataUser:DataUserDTO){
     });
 };
 const data:DataUserDTO = {
-    nome:"priscila",
-    email: "priscila@gmail.com",
+    nome:"arthur Kelvim",
+    email: "arthur@gmail.com",
     telefone:"999556622",
     plano: "individual"
 }
