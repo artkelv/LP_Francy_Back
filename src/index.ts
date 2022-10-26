@@ -7,7 +7,7 @@ import { LPformRouter } from "./router/LPform";
 
 import BodyParser from "body-parser";
 const app = express();
-const port = 3000;
+const port = 3003;
  
 
 app.use(cors())
