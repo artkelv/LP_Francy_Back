@@ -1,6 +1,7 @@
 import { FormData } from "../data/formData";
 import { DataUserDTO } from "../dto/form";
 import { CustomError } from "../error/customError";
+import validationForm from "../validation/validationForm";
 
 export class FormBuss {
     constructor(private formData:FormData){}
@@ -15,6 +16,11 @@ export class FormBuss {
             telefone,
             plano
         }
+
+        const validate = validationForm(data);
+
+        //PAREI AQUI
+
         const formData = await this.formData.createCotation(data)
         
         return formData
