@@ -15,7 +15,7 @@ async function sendEmailForBroker(){
     const dataMessage = await transporter.sendMail({
         from: '"tutu 👻" <tututropa@hotmail.com>',
         to: "francine1919@gmail.com",
-        subject: "Hello ✔",
+        subject: "Hello ✔", 
         text: "oi amigaaaaa",
         html: "<b>Hello world?</b>",
     })
