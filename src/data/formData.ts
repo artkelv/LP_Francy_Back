@@ -1,4 +1,4 @@
-
+/* 
 import { DataUserDTO } from "../dto/form";
 import { CustomError } from "../error/customError";
 import { BaseDataBase } from "./baseDataBase";
@@ -31,4 +31,4 @@ export class FormData extends BaseDataBase{
             throw new CustomError(400 ,err.sqlMessage || err.message)
         }
     }
-}
+} */
