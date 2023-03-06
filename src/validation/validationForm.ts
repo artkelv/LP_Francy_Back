@@ -2,7 +2,6 @@ import { DataUserDTO } from "../dto/form"
 import { CustomError } from "../error/customError"
 
 export default function validationForm(data: DataUserDTO) {
-    //const regexNome = /^[^<>+\-'"\\|?/;:$&()*=a-zA-Z]+$/i; não aceita acentos, mas aceita letras. 
     const regexNome = /^[a-zA-Z ]+$/;
     const regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
     const regexTelefone = /^[0-9]+$/;

@@ -1,6 +1,6 @@
-import { DataUserDTO } from "../src/dto/form"
+/* import { DataUserDTO } from "../src/dto/form"
 
-/*FIREBASE */ 
+FIREBASE
 
 import { initializeApp } from "firebase/app";
 import { getDatabase, ref, set, update, push } from "firebase/database";
@@ -18,7 +18,7 @@ const firebaseConfig = {
 const appFirebase = initializeApp(firebaseConfig);
 const databaseFirebase = getDatabase(appFirebase)
 
-/*FIREBASE*/
+FIREBASE
 
 function firebaseTeste(dataUser:DataUserDTO){
     const db = getDatabase();
@@ -38,3 +38,4 @@ const data:DataUserDTO = {
 }
 
 firebaseTeste(data)
+ */

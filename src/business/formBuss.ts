@@ -1,10 +1,9 @@
-import { FormData } from "../data/formData";
 import { DataUserDTO } from "../dto/form";
 import { CustomError } from "../error/customError";
 import validationForm from "../validation/validationForm";
 
 export class FormBuss {
-    constructor(private formData:FormData){}
+    constructor(){}
     async formLP(dataUser:DataUserDTO){
         const {nome, email, telefone, plano} = dataUser
         if(!nome || !email || !telefone || !plano){
@@ -19,10 +18,8 @@ export class FormBuss {
 
         const validate = validationForm(data);
 
-        //PAREI AQUI
+        console.log("resposta na BUSINESS", validate)
 
-        const formData = await this.formData.createCotation(data)
-        
-        return formData
+        return {message: "created"};
     }
 }
