@@ -33,5 +33,12 @@ export default function validationForm(data: DataUserDTO) {
         throw new CustomError(400, "O campo 'PLANO' não corresponde com o que esperamos")
     }
 
-    return true
+    const response:DataUserDTO = {
+        nome: data.nome,
+        email: data.email,
+        telefone: data.telefone,
+        plano: data.plano
+    }
+
+    return response
 } 

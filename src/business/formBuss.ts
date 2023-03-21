@@ -1,5 +1,6 @@
 import { DataUserDTO } from "../dto/form";
 import { CustomError } from "../error/customError";
+import { sendMessageFrancy } from "../service/nodeMailer";
 import validationForm from "../validation/validationForm";
 
 export class FormBuss {
@@ -16,9 +17,11 @@ export class FormBuss {
             plano
         }
 
-        const validate = validationForm(data);
+        const dataObj = validationForm(data);
 
-        console.log("resposta na BUSINESS", validate)
+        console.log("resposta tem que ser objeto", dataObj)
+        
+        await sendMessageFrancy(dataObj)
 
         return {message: "created"};
     }
