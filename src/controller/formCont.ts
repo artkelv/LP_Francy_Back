@@ -18,14 +18,14 @@ export class FormCont {
             }
             const formLPBuss = await this.formBuss.formLP(dataUser)
             
-            res.send(formLPBuss).status(201)
+            res.status(201).send(formLPBuss)
         } catch (error) {
             if(error instanceof CustomError){
-                res.send(error.message).status(error.statusCode)
+                res.status(error.statusCode).send({message: error.message})
             }else if(error){
-                res.send(error).status(400)
+                res.status(400).send(error)
             }else{
-                res.send("Erro na solicitação ao servidor").status(500)
+                res.status(500).send("Erro na solicitação ao servidor")
             }
         }
     }
