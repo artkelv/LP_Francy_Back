@@ -18,11 +18,13 @@ export class FormBuss {
         }
 
         const dataObj = validationForm(data);
-
-        console.log("resposta tem que ser objeto", dataObj)
         
-        await sendMessageFrancy(dataObj)
+        const sendEmail = await sendMessageFrancy(dataObj)
 
-        return {message: "created"};
+        if(sendEmail !== true){
+            throw new CustomError(401, "Não foi possível enviar o email desejado, ocorreu um erro ao tentar enviar a mensagem.")
+        }
+
+        return {message: "Email sent!"};
     }
 }
